@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+    ## Start - mongodb database definition
+    ### $ mongo
+    mongodb:
+        image: mongo:4.2.6-bionic
+        ports:
+            - "27017-27019:27017-27019"
+        healthcheck:
+            test: "mongo --eval 'db.stats().ok'"
+            interval: 10s
+            timeout: 10s
+            retries: 5
+            start_period: 40s
+        restart: on-failure
+    ## End - mongodb database definition
