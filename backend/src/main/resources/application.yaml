@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      host: ${app.database.mongo.host}
-      port: ${app.database.mongo.port}
-      database: product-db
+      #host: ${app.database.mongo.host}
+      #port: ${app.database.mongo.port}
+      #database: product-db
       auto-index-creation: true
